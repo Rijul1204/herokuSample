@@ -1,0 +1,107 @@
+	body{		
+		text-align:center;
+	}
+	#h2{
+		font-size:2.5em;
+		text-decoration:underline;
+	}
+	#total{
+		width: 1300px;
+		height: 1210px;		
+		background-image:url("paper.jpg");
+				
+		margin-left:auto;
+		margin-right:auto; 
+		border:1px groove black;
+	}
+	#container1{
+		width: 505px;
+		margin-left:auto;
+		margin-right:auto;	
+		background:black;
+		background: -moz-linear-gradient( 	#404040 ,grey); /* For Firefox 3.6 to 15 */
+		background: -webkit-linear-gradient(black,grey);
+		border: 2px double black;
+		padding: 3px;
+		border-radius: 8px;	
+		//background-image:url("images.jpeg");
+	}
+	#container{
+		width: 475px;
+		margin-left:auto;
+		margin-right:auto;
+		padding: 12px;
+		padding-top: 30px;
+		padding-right: 18px;
+	}
+	h1{
+		color:blue;
+		text-align:center;
+	}		
+	table{
+		text-align:center;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		border: 1px double black;
+		border-radius: 8px;		
+	}
+	td{
+		background-color:white;
+		border:2px solid black;
+		padding:2px;
+	
+	}
+	.btn1 {
+		border-top: 1px solid #96d1f8;
+		background: #65a9d7;
+		background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+		background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+		background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+		padding: 5px 10px;
+		border-radius: 8px;
+		box-shadow: rgba(0,0,0,1) 0 1px 0;
+		text-shadow: rgba(0,0,0,.4) 0 1px 0;
+		color: white;
+		font-size: 14px;
+		font-family: Georgia, serif;
+		text-decoration: none;		
+	} 	
+	.btn {
+		border-top: 1px double #96d1f5;
+		background: #65a9d7;
+		background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+		background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+		background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+		padding: 5px 12px;
+		border-radius: 8px;
+		box-shadow: rgba(0,0,0,1) 0 1px 0;
+		text-shadow: rgba(0,0,0,.4) 0 1px 0;
+		color: white;
+		font-size: 18px;
+		font-family: Georgia, serif;
+		text-decoration: none;
+		
+	} 
+	.btn:hover {
+		border-top-color: #28597a;
+		background: #28597a;
+		color: #ccc;
+	}
+	.textbox {	  
+		text-align:center; 
+		font-size: 22px;
+		background: white;
+		//background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+		background: -moz-linear-gradient(top, #F8F8F8 , #B8B8B8  ); 
+		border: 3px double #DDD; 
+		border-radius: 5px; 
+		box-shadow: 0 0 5px #333; 
+		color: #666; 
+		outline: none; 
+		height: 2.5em; 
+		width: 100%;
+		margin-bottom:10px;			
+	}  
+
+
