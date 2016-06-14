@@ -22,6 +22,11 @@ public class HelloController {
         return "index";
     }
     
+    @RequestMapping("/shared-board")
+    public String sharedBoard() {
+        return "board";
+    }
+    
     @RequestMapping("/calculator")
     public String getCalculator(Model model) {
         return "calculator";
@@ -32,6 +37,13 @@ public class HelloController {
     public Greeting greeting(HelloMessage message) throws Exception {
         // Thread.sleep(3000); // simulated delay
         return new Greeting( message.getName());
+    }
+    
+    @MessageMapping("/board")
+    @SendTo("/topic/board")
+    public Point getPoint(Point point) throws Exception {
+        // Thread.sleep(3000); // simulated delay
+        return point;
     }
 
 }
