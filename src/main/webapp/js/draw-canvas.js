@@ -2,6 +2,11 @@ var stompClient = null;
 var clickX = new Array();
 var clickY = new Array();
 var clickDrag = new Array();
+
+var clickServerX = new Array();
+var clickServerY = new Array();
+var clickServerDrag = new Array();
+
 var paint;
 var context;
 
@@ -9,20 +14,21 @@ function addClick(x, y, dragging) {
 	clickX.push(x);
 	clickY.push(y);
 	if (!dragging) dragging = false;
-	clickDrag.push(dragging);		
+	clickDrag.push(dragging);
+	redraw();
 	stompClient.send("/app/board", {}, JSON.stringify({
 		'x' : x,
 		'y' : y,
 		'drag' : dragging
 	}));
-	redraw();
+	
 };
 
 function addClickFromServer(x, y, dragging) {
-	clickX.push(x);
-	clickY.push(y);
+	clickServerX.push(x);
+	clickServerY.push(y);
 	if (!dragging) dragging = false;
-	clickDrag.push(dragging);
+	clickServerDrag.push(dragging);
 	redraw();
 };
 
@@ -88,6 +94,18 @@ function redraw() {
 			context.moveTo(clickX[i] - 1, clickY[i]);
 		}
 		context.lineTo(clickX[i], clickY[i]);
+		context.closePath();
+		context.stroke();
+	}
+	
+	for (var i = 0; i < clickServerX.length; i++) {
+		context.beginPath();
+		if (clickServerDrag[i] && i) {
+			context.moveTo(clickServerX[i - 1], clickServerY[i - 1]);
+		} else {
+			context.moveTo(clickServerX[i] - 1, clickServerY[i]);
+		}
+		context.lineTo(clickServerX[i], clickServerY[i]);
 		context.closePath();
 		context.stroke();
 	}
