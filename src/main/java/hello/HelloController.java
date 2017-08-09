@@ -68,7 +68,7 @@ public class HelloController {
     
     @MessageMapping("/board")
     @SendTo("/topic/board")
-    public List<Point> getPoint(List<Point> point) throws Exception {
+    public Point getPoint(Point point) throws Exception {
         // Thread.sleep(3000); // simulated delay
         return point;
     }
