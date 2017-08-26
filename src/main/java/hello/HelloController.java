@@ -15,7 +15,7 @@ public class HelloController {
     @RequestMapping("/")
     @ResponseBody
     public String index() {
-        return "Greetings from Spring Boot!";
+        return "Hi, This is Rijul. Welcome to my page";
     }    
     
     @RequestMapping("/websock")
